@@ -1,0 +1,97 @@
+Graph based Bin Packing
+
+Time Complexity
+===============
+Toposort which is O(V+E) can be used because the graph that will be made will
+always be Directed Acyclic, so we do not really need to use Dijkstra Shortest
+Path derivative (Dijkstra cannot work with cyclic positive paths anyway for
+longest path). So a combination of toposort and Dijkstra like was used to get
+O(V+E) run time complexity
+
+Space Complexity
+================
+O(n^2) - because there is the possibility of having to connect from every node
+to all the other nodes, there is possibility of O(n^2) space complexity to
+store the linked list of adjacency list
+
++----------------------------------------------------------------------+
+|r |     w      |      h       |      x      |    y       |    t       |
++----------------------------------------------------------------------+
+|0 |  6.488e8   |      0       |  2.932e4    |    0       |    0       |
++----------------------------------------------------------------------+
+|1 | 1.022e6    |     1.10e6   |  5.9732e5   |    7.232e5 |    0       |
++----------------------------------------------------------------------+
+|2 | 2.95e6     |    2.7e6     |   1.01e6    |    5.57e5  |    1e-2    |
++----------------------------------------------------------------------+
+|3 |  3.2e6     |     2.85e6   |  1.25e6     |    9.09e4  |   5e-2     |
++----------------------------------------------------------------------+
+|4 |  6.09e6    |     6.85e6   |   1.95e6    |  6.23e5    |  3e-1      |
++----------------------------------------------------------------------+
+|5 |  9.72e6    |     9.13e6   |   6.09e6    |  1.84e6    |  8.7e-1    |
++----------------------------------------------------------------------+
+|6 |            |              |             |            |            |
++--+------------+--------------+-------------+------------+------------+
+
+
+proj5 sp_flr/r0_sp.txt /dev/null >> report.txt
+Width: 6.488700e+04
+Height: 9.299900e+04
+
+X-coordinate: 2.932200e+04
+Y-coordinate: 0.000000e+00
+
+Elapsed Time: 0.000000e+00
+
+proj5 sp_flr/r1_sp.txt /dev/null >> report.txt
+Width: 1.022105e+06
+Height: 1.106408e+06
+
+X-coordinate: 5.973290e+05
+Y-coordinate: 7.232490e+05
+
+Elapsed Time: 0.000000e+00
+
+proj5 sp_flr/r2_sp.txt /dev/null >> report.txt
+Width: 2.952187e+06
+Height: 2.768867e+06
+
+X-coordinate: 1.017073e+06
+Y-coordinate: 5.579090e+05
+
+Elapsed Time: 1.000000e-02
+
+proj5 sp_flr/r3_sp.txt /dev/null >> report.txt
+Width: 3.276491e+06
+Height: 2.856368e+06
+
+X-coordinate: 1.259888e+06
+Y-coordinate: 9.089480e+05
+
+Elapsed Time: 5.000000e-02
+
+proj5 sp_flr/r4_sp.txt /dev/null >> report.txt
+Width: 6.090605e+06
+Height: 6.852279e+06
+
+X-coordinate: 1.958077e+06
+Y-coordinate: 6.231420e+05
+
+Elapsed Time: 3.000000e-01
+
+proj5 sp_flr/r5_sp.txt /dev/null >> report.txt
+Width: 9.727975e+06
+Height: 9.139627e+06
+
+X-coordinate: 6.091717e+06
+Y-coordinate: 1.843299e+06
+
+Elapsed Time: 8.700000e-01
+
+proj5 sp_flr/r6_sp.txt /dev/null >> report.txt
+Width: 1.100000e+01
+Height: 1.500000e+01
+
+X-coordinate: 0.000000e+00
+Y-coordinate: 0.000000e+00
+
+Elapsed Time: 0.000000e+00

@@ -1,0 +1,44 @@
+Array based implementation of Shell Sort
+
+sequence 1
+- time complexity for init is O(n)
+  but gen sequence is O(1)
+So O(n)
+
+sequence 2
+- time complexity for init is O(n)
+  gen sequence also O(n)
+So O(n)
+
+=====================================
+Example statistins
+
+./proj1 1 i 1000000.txt 1000000seq.txt 1000000output.txt
+Number of comparisons: 1.430647e+09
+Number of moves: 1.449547e+09
+I/O time: 0.000000e+00
+Sorting time: 6.000000e+00
+
+./proj1 1 b 1000.txt b1_1000seq.txt b1_1000output.txt
+Number of comparisons: 0.000000e+00
+Number of moves: 0.000000e+00
+I/O time: 0.000000e+00
+Sorting time: 0.000000e+00
+
+./proj1 2 i 100000.txt 2i_100000seq.txt 2i_100000output.txt
+Number of comparisons: 1.817107e+07
+Number of moves: 2.563879e+07
+I/O time: 0.000000e+00
+Sorting time: 0.000000e+00
+
+./proj1 2 i 100000.txt 2i_100000seq.txt 2i_100000output.txt
+Number of comparisons: 2.225348e+09
+Number of moves: 2.160780e+05
+I/O time: 0.000000e+00
+Sorting time: 8.000000e+00
+
+
+
+=====================================
+Space complexity of sorting routines 
+is O(1)

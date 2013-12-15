@@ -1,0 +1,56 @@
+Linked List implementation of Shell Sort
+
+Tabulation
+==========
+proj2 1000.txt out_1000.txt
+I/O time: 0.000000e+00
+Sorting time: 0.000000e+00
+
+proj2 10000.txt out_10000.txt
+I/O time: 1.000000e-02
+Sorting time: 2.800000e-01
+
+proj2 100000.txt out_100000.txt
+I/O time: 4.000000e-02
+Sorting time: 3.586000e+01
+
++---------------+-----------------+------------------+
+|               |     IO          |     Sort         |
+|               |                 |                  |
++---------------|-----------------|------------------+
+|   1000        |       0         |        0         |
+|               |                 |                  |
++---------------|-----------------|------------------+
+|   10000       |     1.00e-2     |     2.800e-1     |
+|               |                 |                  |
++---------------|-----------------|------------------+
+|   100000      |     4.000e-2    |    3.5860e+1     |
+|               |                 |                  |
++---------------|-----------------|------------------+
+|   1000000     |                 |                  |
+|               |                 |                  |
++---------------+-----------------+------------------+
+
+
+Complexity
+==========
+IO time increases as O(n): assuming malloc costs the same on efficiency every
+time.
+
+Sort time complexity O(n^2): the bubble sort has a higher effect on time
+complexity of sort
+
+Comparison with Project 1
+=========================
+Linked list version is much slower when n > 10000.
+Link skipping will effect on efficiency of Sorting Time, the most because,
+otherwise it should not have that much of effect.
+
+But with regard to IO time, Array version is much faster because mallocs
+do cost alot when n increases and becomes much distinct when n > 10000.
+
+
+Space complexity
+=================
+O(1) : No extra input dependant allocations were made instead of any temporary
+variables

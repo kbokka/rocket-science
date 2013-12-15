@@ -1,0 +1,108 @@
+Optimal Bin Packing
+
+Run time:
+O(n), assuming that n is the number of leaf nodes. As there are 2n-3 edges of
+importance to us, we will visit almost all of them, therefor O(n)
+
+Space complexity:
+O(n), given that number of nodes is n, because of the height of the tree
+at a certain point can become very unbalanced and be very heavy on one side
+actually it will be O(n/2)
+
++----+--------------+--------------+
+|    |  BestWidth   |  BestHeight  |
++----+--------------+--------------+
+| r0 | 6.488700e+04 | 9.299900e+04 |
+| r2 | 2.622907e+06 | 4.923995e+06 |
+| r3 | 8.618902e+06 | 2.728840e+06 |
++----+--------------+--------------+
+
+Processing flr/r0_flr.txt file...
+==========================
+Width: 6.488700e+04
+Height: 9.299900e+04
+
+X-coordinate: 0.000000e+00
+Y-coordinate: 0.000000e+00
+
+Elapsed time: 0.000000e+00
+
+Best width: 6.488700e+04
+Best height: 9.299900e+04
+
+Elapsed time for re-rooting: 0.000000e+00
+
+Processing flr/r2_flr.txt file...
+==========================
+Width: 3.411589e+06
+Height: 4.923995e+06
+
+X-coordinate: 5.193600e+05
+Y-coordinate: 0.000000e+00
+
+Elapsed time: 0.000000e+00
+
+Best width: 2.622907e+06
+Best height: 4.923995e+06
+
+Elapsed time for re-rooting: 0.000000e+00
+
+Processing flr/r3_flr.txt file...
+==========================
+Width: 9.793506e+06
+Height: 2.573651e+06
+
+X-coordinate: 9.637800e+05
+Y-coordinate: 2.320255e+06
+
+Elapsed time: 0.000000e+00
+
+Best width: 8.618902e+06
+Best height: 2.728840e+06
+
+Elapsed time for re-rooting: 0.000000e+00
+
+Processing flr/r4_flr.txt file...
+==========================
+Width: 9.653391e+06
+Height: 1.018544e+07
+
+X-coordinate: 7.987561e+06
+Y-coordinate: 3.441761e+06
+
+Elapsed time: 0.000000e+00
+
+Best width: 9.515508e+06
+Best height: 1.018544e+07
+
+Elapsed time for re-rooting: 0.000000e+00
+
+Processing flr/r5_flr.txt file...
+==========================
+Width: 2.745456e+07
+Height: 1.320092e+07
+
+X-coordinate: 2.447639e+07
+Y-coordinate: 1.683258e+06
+
+Elapsed time: 0.000000e+00
+
+Best width: 2.286623e+07
+Best height: 1.365289e+07
+
+Elapsed time for re-rooting: 0.000000e+00
+
+Processing flr/r6_flr.txt file...
+==========================
+Width: 1.100000e+01
+Height: 1.500000e+01
+
+X-coordinate: 9.000000e+00
+Y-coordinate: 0.000000e+00
+
+Elapsed time: 0.000000e+00
+
+Best width: 1.300000e+01
+Best height: 1.100000e+01
+
+Elapsed time for re-rooting: 0.000000e+00

@@ -1,0 +1,52 @@
+Binary packing for a given input
+
+Run time:
+O(n) because we have to go thorugh the whole tree at least once 
+to get all the packing done
+but actually it is O(2n)
+
+Space complexity:
+O(log n), given that number of nodes is n, because of the height of the tree
+
+$ proj3 flr/r2_flr.txt output
+Width: 3.411589e+06
+Height: 4.923995e+06
+
+X-coordinate: 5.193600e+05
+Y-coordinate: 0.000000e+00
+
+Elapsed time: 0.000000e+00
+
+$ proj3 flr/r3_flr.txt output
+Width: 9.793506e+06
+Height: 2.573651e+06
+
+X-coordinate: 9.637800e+05
+Y-coordinate: 2.320255e+06
+
+Elapsed time: 0.000000e+00
+
+$ proj3 flr/r4_flr.txt output
+Width: 9.653391e+06
+Height: 1.018544e+07
+
+X-coordinate: 7.987561e+06
+Y-coordinate: 3.441761e+06
+
+Elapsed time: 0.000000e+00
+
++-------|------------|---------|----------|--------|--------+
+|       |     width  |  height |   x      |    y   |  time  |
+|       |            |         |          |        |        |
++-------+------------+---------+----------+--------+--------+
+|  r2   |   3.14e6   |  4.92e6 |          |        |        |
+|       |            |         |          |        |        |
++-------|------------|---------|----------|--------|--------+
+|  r3   |  9.73e5    |  2.57e6 |          |        |        |
+|       |            |         |          |        |        |
++-------|------------|---------|----------|--------|--------+
+|  r4   |    9.5e6   |  1.01e7 |          |        |        |
+|       |            |         |          |        |        |
++-------+------------+---------+----------+--------+--------+
+
+
