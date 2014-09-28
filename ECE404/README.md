@@ -1,4 +1,4 @@
-**ECE 404 -  Introduction to Computer Security:**
+**ECE 404 -  Introduction to Computer Security:**  
 https://engineering.purdue.edu/ece404/  
 with Prof. Avinash Kak
 

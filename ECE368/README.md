@@ -1,4 +1,4 @@
-**ECE 368 - Data structures and Algorithms:**
+**ECE 368 - Data structures and Algorithms:**  
 with Prof. Cheng-Kok Koh
 
 - shell-sort

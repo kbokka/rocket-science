@@ -1,4 +1,4 @@
-**ECE 473 - Introduction to Artifical Intelligence:**
+**ECE 473 - Introduction to Artifical Intelligence:**  
 https://engineering.purdue.edu/~ee473/  
 with Prof. Jeffrey Mark Siskind
 
