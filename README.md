@@ -26,4 +26,4 @@
 - Syn flood attacks and Port scans
 - Smashing the stack
 - ...
-- (these are not in order)
+- (these are not in the order that they were done)
