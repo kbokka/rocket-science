@@ -8,7 +8,7 @@
 - binary-bin-packing
 - graphical-bin-packing
 
-**ECE 473 - Introduction to Artifical Intelligce:**
+**ECE 473 - Introduction to Artifical Intelligence:**
 
 - Set operations : Scheme and functional programming
 - Truth table : Semantics and Evaluation
