@@ -1,0 +1,10 @@
+(define (map f l)
+ (if (null? l)
+     '()
+     (cons (f (first l)) (map f (rest l)))))
+
+(define (mapc f)
+ (lambda (l)
+  (if (null? l)
+      '()
+      (cons (f (first l)) ((mapc f) (rest l))))))

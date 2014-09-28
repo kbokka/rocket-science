@@ -1,0 +1,43 @@
+(define (flatten l)
+ (cond ((null? l) '())
+       ((not (list? l)) (list l))
+       (else (append (flatten (first l)) (flatten (rest l))))))
+
+(define (map-reduce g identity f phi I)
+ (if (null? phi)
+     identity
+     (g (second (f (first phi) I)) (map-reduce g identity
+	f (rest phi) (first (f (first phi) I))))))
+;(map-reduce g (g (second (f (first phi) I)) identity)
+;f (rest phi) (first (f (first phi) I)))))
+
+(define (lookup x bindings)
+ (cond ((null? bindings) '())
+       ((eq? x (first (first bindings))) (second (first bindings)))
+       (else (lookup x (rest bindings)))))
+
+(define (and-function x y) (and x y))
+(define (or-function x y) (or x y))
+
+(define (valuate phi I)
+ (display I)
+ (if (not (list? phi))
+     (cond ((or (eq? phi #t) (eq? phi #f)) (list I phi))
+	   ((symbol? phi)
+	    (if (null? (lookup phi I))
+		(list (valuate phi (append I (list (list phi #t))))
+		      (valuate phi (append I (list (list phi #f)))))
+		(list I (lookup phi I)))))
+     (cond ((eq? (first phi) 'not) (not (valuate (rest phi) I)))
+	   ((eq? (first phi) 'and)
+	    (map-reduce and-function #t
+			(lambda (x y) (valuate x I)) (rest phi) I))
+	   ((eq? (first phi) 'or)
+	    (map-reduce or-function #f
+			(lambda (x y) (valuate x I)) (rest phi) I))
+	   ((symbol? phi) (lookup phi I))
+	   (else (panic "Formula have unidentified elements")))))
+
+
+(define (truth-table phi)
+ (valuate phi '()))
