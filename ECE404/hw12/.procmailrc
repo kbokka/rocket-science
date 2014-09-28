@@ -1,0 +1,71 @@
+SHELL=/bin/sh
+PATH=/usr/local/lib/mh:$PATH
+MAILDIR=$HOME/Mail
+LOGFILE=$HOME/Mail/logfile
+SENDMAIL=/usr/sbin/sendmail
+#VERBOSE=1
+VERBOSE=0
+EOL="
+"
+LOG="$EOL$EOL$EOL"
+LOG="New message log:$EOL"
+LOG=`perl GET_MESSAGE_INDEX`
+LOG="$EOL"
+
+
+
+## JM Recipe_1:
+## 
+## Recipe to trap emails with multiple entries in From
+##
+:0 :
+* ^From:.*@.*,.*@
+junkMail
+
+## JM Recipe_2:
+## 
+## Recpie to trap based of Subject line
+## Diploma, Degree,
+## Free, Cheap
+## medications, viagra, pills 
+##
+:0 :
+* ^Subject:.*(diploma.?\>|\<degree.?\>|certificate.?\>|\<fre+\>|\<cheap\>|100.?.?guaranteed|partner.with|\<v[a-z]*a[gq]r+a[a-z]*\>|\<medications\>|\<\p+[1ij]+lls\>)
+junkMail
+
+## JM Recipe_3.1:
+## 
+## Recpie to trap based of Body
+## 
+:0 B:
+* (\<new\>.*\<alert\>)
+junkMail
+
+## JM Recipe_3.2:
+## 
+## Recpie to trap based of Body
+## 
+:0 B:
+* (\<casino\>)
+* (\<play\>|\<win\>|\<free\>|\<register\>)
+* (http://|\<www\>)
+junkMail
+
+## JM Recipe_4:
+## 
+## Recpie to trap based of Content Type
+## Both html and plain text, probably a email marketting
+##
+:0 HB:
+* Content-Type: multipart/alternative
+* Content-Type: text/plain
+* Content-Type: text/html
+junkMail
+
+
+## Recipe_last:
+## 
+## Default action
+##
+:0 :
+/var/mail/ece404a1

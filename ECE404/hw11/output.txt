@@ -1,0 +1,68 @@
+### WITH MAX_DATA_SIZE 5 ####
+[~/woork/ECE404/hw11] $ client 128.46.4.85
+Connected!!!
+Say something: hello
+You Said: hell
+Say something: badass
+You Said: bada
+Say something: help
+You Said: help
+Say something: 123 123 123 
+You Said: 123 
+Say something: ^C
+
+
+[~/woork/ECE404/hw11] $ server 7777
+Connected from 128.46.4.85
+RECEIVED: hello
+SENT: hellRECEIVED BYTES: 6
+
+RECEIVED: badass
+SENT: badaRECEIVED BYTES: 7
+
+RECEIVED: help
+SENT: helpRECEIVED BYTES: 5
+
+RECEIVED: 123 123 123 
+SENT: 123 RECEIVED BYTES: 13
+
+^C
+
+### WITH MAX_DATA_SIZE 4096 ####
+[~/woork/ECE404/hw11] $ client 128.46.4.85
+Connected!!!
+Say something: test 4096
+You Said: test 4096
+
+Say something: makes more sense
+You Said: makes more sense
+
+Say something: the cleint's max data size is 4096
+You Said: the cleint's max data size is 4096
+
+Say something: so... just accept only that much
+You Said: so... just accept only that much
+
+Say something: ^C
+
+[~/woork/ECE404/hw11] $ server 7777
+Connected from 128.46.4.85
+RECEIVED: test 4096
+SENT: test 4096
+RECEIVED BYTES: 10
+
+RECEIVED: makes more sense
+SENT: makes more sense
+RECEIVED BYTES: 17
+
+RECEIVED: the cleint's max data size is 4096
+SENT: the cleint's max data size is 4096
+RECEIVED BYTES: 35
+
+RECEIVED: so... just accept only that much
+SENT: so... just accept only that much
+RECEIVED BYTES: 33
+
+^C
+
+

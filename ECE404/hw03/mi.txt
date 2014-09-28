@@ -1,0 +1,1 @@
+MI of 100 modulo 107 is: 61

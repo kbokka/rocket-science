@@ -1,0 +1,22 @@
+Name: Samodya Abeysiriwardane
+ECE 404 HW 1 Prob 1 Sample
+
+[~/woork/ECE404/hw01] $ echo -e "BlisteringBarniclesThunderingTyphoons\nMyPassword" | cipher.py
+Please enter the Text: 
+Please enter the Key Phrase: 
+
+Encrypted Text:
+NjxSlWnWeJNYGNaUhSjwtsCDWjebXwKnwOgfo
+
+
+
+[~/woork/ECE404/hw01] $ cipher.py
+Please enter the Text: 
+BlisteringBarniclesThunderingTyphoons
+Please enter the Key Phrase: 
+MyPassword
+
+Encrypted Text:
+NjxSlWnWeJNYGNaUhSjwtsCDWjebXwKnwOgfo
+
+

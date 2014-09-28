@@ -1,0 +1,40 @@
+For keybit changes:
+Average number of changes:  3676.25
+
+For plain text changes:
+Average number of changes:  33.6666666667
+
+
+Enter the key: Testing with:  0110110101101111011100100110100101100001011100100111010001111001
+
+Test with Keybits Changed ----
+Change MSB bit in key:
+Testing with:  1110110101101111011100100110100101100001011100100111010001111001
+3626 bits changed in cipher text
+
+Change 2nd LSB bit in key:
+Testing with:  0110110101101111011100100110100101100001011100100111010001111011
+3676 bits changed in cipher text
+
+Change 5th MSB in key:
+Testing with:  0110100101101111011100100110100101100001011100100111010001111001
+3708 bits changed in cipher text
+
+Change 3rd MSB bit in key:
+Testing with:  0111110101101111011100100110100101100001011100100111010001111001
+3695 bits changed in cipher text
+
+Average number of changes:  3676.25
+
+Test with Plain txt bits Changed ----
+with key:  moriarty
+Change 32nd bit in 3rd 64 block of text:
+35 bits changed in cipher text
+
+Change 10th bit in 5th 64 block of text:
+33 bits changed in cipher text
+
+Change 15th bit in 9th 64 block of text:
+33 bits changed in cipher text
+
+Average number of changes:  33.6666666667
