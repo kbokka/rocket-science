@@ -1,3 +1,6 @@
 [submodule "ECE468/microbe"]
 	path = ECE468/microbe
 	url = https://github.com/sransara/microbe.git
+[submodule "ECE437/aw-processor"]
+	path = ECE437/aw-processor
+	url = https://github.com/sransara/aw-processor.git
