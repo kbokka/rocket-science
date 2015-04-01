@@ -4,3 +4,6 @@
 [submodule "ECE437/aw-processor"]
 	path = ECE437/aw-processor
 	url = https://github.com/sransara/aw-processor.git
+[submodule "ECE469"]
+	path = ECE469
+	url = git@github.com:iDFLO/grass2farts.git
