@@ -1,0 +1,13 @@
+For one-level:
+- test2 is at the end since it exitsim after TRAP_ACCESS
+- so the order is test1, test3, test4, test5, test6 and then test2
+
+For fork:
+Extra print statements have been added in os to do the question 4 as well as make it easier for grading
+- ProcessForkTestPrints(PCB*) in process.c does the printing of valid PTEs
+- MemoryRopAccessHandler has extra print statements before handling and after handling
+- ProcessFork has extra print statements near the end of the function to show that both procs have Readonly pages
+
+For HeapMgmt:
+When allocating memory for malloc, we implemented a search function to first find the lowest avaiable block before
+splitting bigger blocks to prevent fragmentation. This will affect speed but be more memory resourceful.

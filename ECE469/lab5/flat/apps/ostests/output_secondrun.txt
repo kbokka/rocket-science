@@ -1,0 +1,38 @@
+cd ../../bin; dlxsim -x os.dlx.obj -a -D F -u ostests.dlx.obj; ee469_fixterminal
+Stack=0x1fffc4, pc starting at 0x13458
+Got 4 arguments.
+Available memory: 0x2db60 -> 0x200000.
+Argument count is 4.
+Argument 0 is -D.
+Argument 1 is F.
+Argument 2 is -u.
+Argument 3 is ostests.dlx.obj.
+
+================= Start ostests (second run)
++ Hello file did exist
+++ Reopening hello file
+++ Researched for hello and found same hello file, filehandle:0
+***** Check @ 1240 into buffer (should be mellow)
+***** Found: mellow
+***** Check @ 1250 into buffer (should be yellow)
+***** Found: yellow
+++ Re-Writing jello on hello file @ random address 1240
+++ tests whether writes do a read on non algined writes
+++ Call DfsInodeFileSize function: returned 5167
+***** Check @ 1250 into buffer (should be yellow)
+***** Found: yellow
+***** Check @ 1240 into buffer (should be jello)
+***** Found: jello
+---- In 512 DFS block size; 5160 byte will be in indirect block addressed
+***** Check @ 5160 into buffer (should be fellow)
+***** Found: fellow
+---- Deleting hello file
+================= End ostests
+
+No runnable processes - exiting!
+GracefulExit: closing filesystem and exiting simulator
+Exiting at program request.
+Instructions executed: 4168506
+Time simulated: 4.169 secs
+Real time elapsed: 0.441 secs
+Execution rate: 9.44M simulated instructions per real second.

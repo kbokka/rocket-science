@@ -1,0 +1,22 @@
+- DLXOS supports a max of 32 semaphores.
+- DLXOS supports a max of 64 locks.
+- DLXOS creates semaphores by atomically checking if there is space to create a 
+	semaphore. Otherwise if the max # of semaphores is already created then the 
+	function returns a fail value. If successful a function is called to 
+	initialize the semaphore structure. Which is created by calling a function to
+	initialize a queue. If the queue fails to initialize the function returns a 
+	fail value.
+- `sem_signal` increments the count of the semaphore and wakes up a process 
+	waiting on the semaphore. The function fails if the semaphore is not an 
+	initialized, valid semaphore. In such a case, it returns 1 without without 
+	modifying the count. Otherwise it returns 0 indicating that call was 
+	successful.
+	`sem_wait` decrements the count of the semaphore and waits if the count is negative.
+	The function fails if the semaphore is not an initialized, valid semaphore.
+	In such a case, it returns 1 without waiting and without modifying the count. 
+	Otherwise it returns 0 indicating that the call was successful.
+- In DLXOS a semaphore handle is created when first creating a semaphore using 
+	`sem_create`. And whenever we want to use that same semaphore we must use this
+	same handle. Basically this handle needs to be passed as arguments to 
+	`sem_signal` and `sem_wait` to use the count and queue associated with the
+	semaphore.

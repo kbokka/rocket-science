@@ -1,0 +1,31 @@
+- q1
+Nothing to build
+
+
+- q2
+# cd to os
+make
+# cd to q2
+make
+make run
+
+- q3
+# cd to os
+make
+# cd to q3
+make
+make run
+
+- q4
+# cd to os
+make
+# cd to q4
+make
+make run
+
+- q5
+# cd to os
+make
+# cd to q5
+make
+make run
