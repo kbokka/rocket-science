@@ -27,3 +27,10 @@
 - Smashing the stack
 - ...
 - (these are not in the order that they were done)
+
+**ECE 469 - OS:**
+
+- Process synchronization
+- Multiprogramming	
+- Memory management
+- File system 	
